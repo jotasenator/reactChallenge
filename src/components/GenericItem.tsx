@@ -40,7 +40,8 @@ export const GenericItem: React.FC<Props> = ({ name, packInfo, packDetails, edit
         <h2>{name} </h2>
         <h3> Quantity: 
           <input className='ml-5'
-          type="number"
+                    type="number"
+                    placeholder='0'
           value={quantity}
           onChange={handleChangeQuantity}
           />
