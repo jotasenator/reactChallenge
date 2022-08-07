@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { EditRemove } from './EditRemove';
+import { Picture } from './Picture';
 import { Remove } from './Remove';
 
 interface Props {
@@ -32,25 +33,34 @@ export const GenericItem: React.FC<Props> = ({ name, packInfo, packDetails, edit
         
         {
           
-        <div>
+          <div className='genericItem'>
+              <Picture />
+            <div className='genericData'>
+              <div className='genericInfo'>
         <h2>{name} </h2>
-        <h3> Quantity:
-          <input
+        <h3> Quantity: 
+          <input className='ml-5'
           type="number"
-          placeholder="How many items do you want?"
           value={quantity}
           onChange={handleChangeQuantity}
           />
         </h3>
         <ul>
-          {packInfo?.map((x, index )=> <li key={index}>{x}  {packDetails &&packDetails[index]}</li>)}
+                {packInfo?.map((x, index) => <li key={index}>{x}  <span className='natural-gray'> ({packDetails && packDetails[index]})</span></li>)}
            
-        </ul>
-        <h2> ${price}  </h2>
-        <h2>Total: ${total.toFixed(2)}</h2>
+        </ul>        
 
-          {editRemove ? <EditRemove /> : <Remove />}
-        </div>
+                {editRemove ? <EditRemove /> : <Remove />}
+              </div>
+
+              <div className='priceResults'>              
+                <h2> ${price}  </h2>
+                <h2>Total: ${total.toFixed(2)}</h2>
+              </div>
+            <div className='separator grayBackground'></div>
+          </div>
+          </div>
+          
         }
 
 

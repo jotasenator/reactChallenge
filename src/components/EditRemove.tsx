@@ -11,7 +11,7 @@ export const EditRemove: React.FC = () => {
   return (
       <>
           <div>
-          <button onClick={handleEditPack}>Edit pack</button>
+              <button className='editPackButton btn-generic' onClick={handleEditPack}>Edit pack</button> 
               <Remove />
           </div>
           

@@ -13,7 +13,7 @@ export const Remove: React.FC = () => {
   return (
       <>
 
-          <button onClick={handleRemove}>Remove</button>
+          <button className='btn-generic' onClick={handleRemove}>Remove</button>
       </>
   )
 }
