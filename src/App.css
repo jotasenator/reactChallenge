@@ -34,7 +34,8 @@ body {
 .blackBackground{
   background-color: black;
 }
-.grayBackground{
+.grayBackground,
+.grayBackgroundCopy{
   background:#E6E8E9;
 }
 
@@ -127,7 +128,12 @@ input{
 .ta-l{
   text-align:left;
 }
-
+.ml-90{
+  margin-left:90px
+}
+.mr-90{
+  margin-right:90px
+}
 .btn-generic{
   background: transparent;
   border: transparent;
@@ -234,6 +240,7 @@ input{
 }
 a{
   color: black;
+  text-decoration: none;
 }
 .logoFooter{
   font-family: Open Sans;
@@ -243,3 +250,45 @@ a{
     letter-spacing: 0em;
     text-align: center;
 }
+
+/* navbar */
+.navbarGray,
+.navbarBlack{
+  width:100%;
+}
+.navbarBlack{
+  height: 88px;
+}
+.navbarGray{
+  display: flex;
+  align-items: center;
+  height: 64px;
+  gap:24px;
+}
+.navbarLinks{
+  position: relative;
+  left: 12rem;
+  gap: 30px;
+  display: flex;    
+}
+.navbarRigth{
+  display: flex;
+  flex-direction: row;
+  gap:27px;
+  position: absolute;
+  right: 90px;
+}
+.centering{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:12px;
+}
+
+#search{
+  border-radius:20px;
+  height: 40px;
+  width:700px;
+}
+
+
