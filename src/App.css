@@ -1,10 +1,20 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
 .App {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100%;
 }
 /* colors */
+.black{
+  color:black;
+}
 .gray{
   color:#E6E8E9;
 }
@@ -21,8 +31,15 @@
   color:white;
 }
 /* background colors */
+.blackBackground{
+  background-color: black;
+}
 .grayBackground{
   background:#E6E8E9;
+}
+
+.grayBackground:hover{
+  background: #ced9ea;
 }
 .dark-softBackground{
   background:#3A4451;
@@ -100,6 +117,9 @@ input{
 .ml-24{
   margin-left: 24px;
 }
+.mt-40{
+  margin-top:40px;
+}
 .ml-94{
   margin-left: 94px;
 }
@@ -156,10 +176,70 @@ input{
   position:relative;
   right:650px;
   top:80px;
-  
+
 }
 .youMightChild{
   height: 336px;
-  width: 336px;
-  
+  width: 336px;  
+}
+
+/* footer */
+.footer{
+  background: #E6E8E9;
+  margin-top:120px;
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom:0;
+
+}
+.footerUp{
+  display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+.footerDown{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  margin-bottom: 76px;
+    margin-right: 149px;
+    margin-left: 158px;
+    margin-top: 120px;
+}
+.right{
+  display: flex;
+  gap:36px;
+  justify-content: center;
+  flex-direction: row;
+}
+.leftInfo,
+.companyInfo,
+.helpInfo,
+.information{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+}
+.leftInfo{
+  width:264px;
+}
+.redesSocialesFooter{
+  gap:8px;
+  display: flex;
+  flex-direction: row;
+}
+a{
+  color: black;
+}
+.logoFooter{
+  font-family: Open Sans;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
 }

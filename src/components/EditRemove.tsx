@@ -10,7 +10,7 @@ export const EditRemove: React.FC = () => {
 
   return (
       <>
-          <div>
+          <div style={{display:"flex"}}>
               <button className='editPackButton btn-generic' onClick={handleEditPack}>Edit pack</button> 
               <Remove />
           </div>
