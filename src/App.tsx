@@ -24,8 +24,14 @@ function App() {
               <OrderSummary/>
             </div>
       </div>
-
       <div>
+
+        <h2 className='youMightAlsoTitle'>You Might Also Like</h2>
+      </div>
+      <div className='youMightAlsoLike'>
+        <YouMightAlsoLike />        
+        <YouMightAlsoLike />        
+        <YouMightAlsoLike />        
         <YouMightAlsoLike />        
       </div>
 
