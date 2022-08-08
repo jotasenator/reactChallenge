@@ -37,8 +37,7 @@ export const GenericItem: React.FC<Props> = ({ id, name, packInfo, packDetails, 
 
     return (
       <>
-        {console.log(deleteFlag.deleteFlag)}
-        
+                
         {
           !showItem &&
           
