@@ -3,7 +3,7 @@ import { GenericItem } from './components/item/GenericItem';
 import { Navbar } from './components/navbar/Navbar';
 import { Footer } from './components/footer/Footer';
 import { YouMightAlsoLike } from './components/youMightAlsoLike/YouMightAlsoLike';
-import { OrderSummary } from './components/OrderSummary';
+import { OrderSummary } from './components/orderSummary/OrderSummary';
 
 function App() {
   return (

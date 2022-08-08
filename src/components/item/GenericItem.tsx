@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { EditRemove } from './delete/EditRemove';
-import { Picture } from '../Picture';
+import { Picture } from './Picture';
 import { Remove } from '../item/delete/Remove';
 
 interface Props {

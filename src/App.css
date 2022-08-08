@@ -291,4 +291,7 @@ a{
   width:700px;
 }
 
-
+button{
+  cursor: pointer;
+  z-index:100;
+}
