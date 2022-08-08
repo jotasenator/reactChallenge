@@ -9,7 +9,7 @@ export const FooterLinks: React.FC<Props> = ({content}) => {
         
   return (
       <>
-       <a href="#">{content} </a>
+       <a href={`/${content}`} >{content} </a>
           
       </>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import { NavbarLinks } from './NavbarLinks'
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
+import Search from '@mui/icons-material/Search';
 
 
 export const Navbar: React.FC = () => {
@@ -15,10 +16,13 @@ export const Navbar: React.FC = () => {
             LOGO
             </div>
           </div>
-          <div><input style={{ paddingLeft:"10px"}} type="search" name="search" id="search" placeholder='Search products'/></div>
+          <div className='search'>
+            <Search style={{position:"relative",left:"40px",top:"6px"}}/>
+            <input  type="search" name="search" id="search" placeholder='Search products' />
+          </div>
           <div className='navbarRigth'>
-            <div className='white centering'><span><AccountCircleRoundedIcon /></span> <a href="#" className='white'>Sign in</a> </div>
-            <div className='white centering'><span><BusinessCenterRoundedIcon /></span><a href="#" className='white'>Cart</a> </div>
+            <div className='white centering'><span><AccountCircleRoundedIcon /></span> <a href="/signin" className='white'>Sign in</a> </div>
+            <div className='white centering'><span><BusinessCenterRoundedIcon /></span><a href="/cart" className='white'>Cart</a> </div>
           </div>
         </div>
         <div className='navbarGray grayBackgroundCopy'>
