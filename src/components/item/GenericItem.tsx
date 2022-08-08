@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { EditRemove } from './EditRemove';
-import { Picture } from './Picture';
-import { Remove } from './Remove';
+import { EditRemove } from './delete/EditRemove';
+import { Picture } from '../Picture';
+import { Remove } from '../item/delete/Remove';
 
 interface Props {
     name: string;

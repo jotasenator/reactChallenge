@@ -1,8 +1,8 @@
 import './App.css';
-import { GenericItem } from './components/GenericItem';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/Footer';
-import { YouMightAlsoLike } from './components/YouMightAlsoLike';
+import { GenericItem } from './components/item/GenericItem';
+import { Navbar } from './components/navbar/Navbar';
+import { Footer } from './components/footer/Footer';
+import { YouMightAlsoLike } from './components/youMightAlsoLike/YouMightAlsoLike';
 import { OrderSummary } from './components/OrderSummary';
 
 function App() {
