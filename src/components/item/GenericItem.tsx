@@ -1,19 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { EditRemove } from './delete/EditRemove';
 import { Picture } from './Picture';
 import { Remove } from '../item/delete/Remove';
+import { DeleteContext } from '../../context/delete/DeleteContext';
+
 
 interface Props {
+    id: number;
     name: string;
     packInfo?: string[];
     packDetails?: string[];
     editRemove: boolean;
     remove: boolean;    
     price: string;
+    showItem: boolean;
 }
 
-export const GenericItem: React.FC<Props> = ({ name, packInfo, packDetails, editRemove, remove, price }) => {
-  
+export const GenericItem: React.FC<Props> = ({ id, name, packInfo, packDetails, editRemove, remove, price,showItem }) => {
+
+  const {deleteFlag} = useContext(DeleteContext)
+
+   
   const [total, setTotal] = useState(0)
   const [quantity, setQuantity] = useState('')
 
@@ -25,13 +32,15 @@ export const GenericItem: React.FC<Props> = ({ name, packInfo, packDetails, edit
     setTotal(+price * +quantity)  
     
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [quantity])
+  }, [quantity, showItem])
   
 
     return (
       <>
+        {console.log(deleteFlag.deleteFlag)}
         
         {
+          !showItem &&
           
           <div className='genericItem'>
               <Picture />

@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { DeleteContext } from '../../../context/delete/DeleteContext';
+import { types } from '../../../types/types';
 
 
 export const Remove: React.FC = () => {
-    let deleteFlag = false
+    const {dispatch} = useContext(DeleteContext)
     
     const handleRemove = () => {
-        deleteFlag = true
-        
-        alert(deleteFlag)
+        dispatch({
+            type: types.delete,
+            payload: {
+                deleteFlag: true
+            }
+        })
     }
     
   return (
@@ -18,3 +23,4 @@ export const Remove: React.FC = () => {
       </>
   )
 }
+
