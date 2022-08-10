@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { EditRemove } from './delete/EditRemove';
 import { Picture } from './Picture';
-import { Remove } from '../item/delete/Remove';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
 interface Props {
     name: string;
@@ -12,10 +11,19 @@ interface Props {
     price: string;
 }
 
-export const GenericItem: React.FC<Props> = ({ name, packInfo, packDetails, editRemove, remove, price }) => {
-  
+export const GenericItem: React.FC<Props> = ({ name, packInfo, packDetails, editRemove, remove, price}) => {
+  const [deleteStyle, setDeleteStyle] = useState(false)
   const [total, setTotal] = useState(0)
   const [quantity, setQuantity] = useState('')
+
+  const handleRemove = () => {
+    setDeleteStyle(!deleteStyle)
+  }
+
+  const handleEditPack = () => {
+    alert('Learn React.js if you want to Edit Pack :)')
+  }
+
 
   const handleChangeQuantity = (e: { target: { value: string; }; }) => {
     e.target.value && +e.target.value >=0 && setQuantity(e.target.value);
@@ -26,14 +34,13 @@ export const GenericItem: React.FC<Props> = ({ name, packInfo, packDetails, edit
     
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [quantity])
-  
 
     return (
       <>
         
         {
           
-          <div className='genericItem'>
+          <div className='genericItem' style={{ display: deleteStyle ? 'none' : 'flex'}}>
               <Picture />
             <div className='genericData'>
               <div className='genericInfo'>
@@ -51,7 +58,14 @@ export const GenericItem: React.FC<Props> = ({ name, packInfo, packDetails, edit
            
         </ul>        
 
-                {editRemove ? <EditRemove /> : <Remove />}
+                {editRemove ? (
+                  <div style={{ display: "flex" }}>
+                    <button className='editPackButton btn-generic' onClick={handleEditPack}>Edit pack</button>
+                    <button className='btn-generic' onClick={handleRemove} style={{ display: "flex", justifyContent: "center", alignItems: "center" }} ><span><DeleteOutlineOutlinedIcon /></span> Remove</button>
+                  </div>
+                ):
+                  (<button className='btn-generic' onClick={handleRemove} style={{ display: "flex", justifyContent: "center", alignItems: "center" }} ><span><DeleteOutlineOutlinedIcon /></span> Remove</button>)
+                }
               </div>
 
               <div className='priceResults'>              
